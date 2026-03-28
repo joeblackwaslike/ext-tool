@@ -1,0 +1,81 @@
+site_name: ext-tool
+repo_url: https://github.com/joeblackwaslike/ext-tool
+site_url: https://joeblackwaslike.github.io/ext-tool
+site_description: Manage VS Code / Cursor extensions from a single source-of-truth TOML registry.
+site_author: Joe Black
+edit_uri: edit/main/docs/
+repo_name: joeblackwaslike/ext-tool
+copyright: Maintained by <a href="https://joeblackwaslike.com">joeblackwaslike</a>.
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Installation: installation.md
+  - Usage: usage.md
+  - Code Examples: code-examples.md
+  - Content Tabs: content-tabs.md
+  - Diagram Examples: diagram-examples.md
+  - API Reference: modules.md
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: ["src/ext_tool"]
+
+theme:
+  name: material
+  feature:
+    tabs: true
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.footer
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/joeblackwaslike/ext-tool
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/ext-tool
+
+markdown_extensions:
+  - attr_list
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
