@@ -10,24 +10,41 @@ copyright: Maintained by <a href="https://joeblackwaslike.com">joeblackwaslike</
 nav:
   - Home: index.md
   - Getting Started: getting-started.md
-  - Installation: installation.md
-  - Usage: usage.md
-  - Code Examples: code-examples.md
-  - Content Tabs: content-tabs.md
-  - Diagram Examples: diagram-examples.md
-  - API Reference: modules.md
+  - User Guide:
+    - Installation: installation.md
+    - Configuration: configuration.md
+    - Commands: commands.md
+    - Workflows: workflows.md
+    - Shell Completions: completions.md
+  - For Developers:
+    - Contributing: contributing.md
+    - Architecture: architecture.md
+  - API Reference:
+    - Overview: api/index.md
+    - CLI: api/cli.md
+    - Configuration: api/config.md
+    - Models: api/models.md
+    - Marketplace: api/marketplace.md
+    - Scanner: api/scanner.md
+    - Cache: api/cache.md
+    - Logging: api/logging.md
 
 plugins:
   - search
   - mkdocstrings:
       handlers:
         python:
-          paths: ["src/ext_tool"]
+          paths: ["src"]
+          options:
+            show_root_heading: true
+            show_source: false
+            members_order: source
+            show_signature_annotations: true
+            separate_signature: true
+            docstring_style: google
 
 theme:
   name: material
-  feature:
-    tabs: true
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -46,7 +63,12 @@ theme:
   icon:
     repo: fontawesome/brands/github
   features:
+    - navigation.tabs
+    - navigation.sections
     - navigation.footer
+    - navigation.top
+    - search.highlight
+    - search.suggest
 
 extra:
   social:
