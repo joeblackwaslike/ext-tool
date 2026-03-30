@@ -31,7 +31,6 @@ ENV/
 
 # uv
 .uv/
-uv.lock
 
 # Testing
 .tox/
