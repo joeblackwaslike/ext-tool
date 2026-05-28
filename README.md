@@ -1,5 +1,8 @@
 # ext-tool
 
+[![Discord](https://img.shields.io/discord/1486035859747897414?logo=discord&label=Discord&color=5865F2)](https://discord.com/channels/1486035859747897414/1509515399937392751) [![Join Discord](https://img.shields.io/badge/Discord-Join%20Server-5865F2?logo=discord&logoColor=white)](https://discord.gg/Fjc9zYHZyV)
+
+
 **`ext`** — a unified CLI for managing VS Code / Cursor extensions from a single source-of-truth TOML registry.
 
 ## Features
